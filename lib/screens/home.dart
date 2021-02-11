@@ -55,19 +55,19 @@ class _HomeScreenState extends State<HomeScreen> {
     return InkWell(
       onTap: _handleToggleButton,
       child: AnimatedContainer(
-          duration: Duration(milliseconds: 1000),
+          duration: Duration(milliseconds: 400),
           height: 40.0,
           width: 80.0,
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.0), color: isToggleButtonActive ? Colors.blue[100] : Colors.grey[300]),
           child: Stack(children: [
             AnimatedPositioned(
-              duration: Duration(milliseconds: 1000),
+              duration: Duration(milliseconds: 400),
               curve: Curves.easeIn,
               top: 6.0,
               left: isToggleButtonActive ? 30.0 : 0.0,
               right: isToggleButtonActive ? 0.0 : 30.0,
               child: AnimatedSwitcher(
-                  duration: Duration(milliseconds: 1000),
+                  duration: Duration(milliseconds: 400),
                   transitionBuilder: (Widget child, Animation<double> animation) {
                     return RotationTransition(turns: animation, child: child);
                   },
